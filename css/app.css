@@ -35,6 +35,7 @@ body {
 
 h1 {
     font-weight: 300;
+    margin: 10px 0;
 }
 
 /*
@@ -259,6 +260,7 @@ img {
 
     .deck {
         width: 100%;
+        margin: -10px 0;
     }
 
     .deck .card {
@@ -295,11 +297,11 @@ img {
     }
 
     .socialmedia-logo {
-        width: 30px;
+        width: 25px;
     }
 
     .socialmedia-logo:hover {
-        width: 50px;
+        width: 30px;
     }
 
 }
@@ -356,22 +358,22 @@ img {
     }
 
     .socialmedia-logo {
-        width: 40px;
+        width: 35px;
     }
 
     .socialmedia-logo:hover {
-        width: 50px;
+        width: 40px;
     }
 }
 
 @media screen and (min-width: 451px) and (max-width: 600px) {
     .deck {
-        width: 100%;
-        margin: -20px;
+        width: 85%;
+        margin: -30px;
     }
 
     .deck .card {
-        height: 26%;
+        height: 21%;
         width: 20%;
         margin: 5px 2px;
     }
@@ -391,25 +393,28 @@ img {
     }
 
     #footer {
-        font-size: 35px;
+        font-size: 30px;
         width: 100%;
         right: 0;
-        bottom: 20px;
+        bottom: 0;
         text-align: center;
     }
 
     .socialmedia-logo {
-        width: 40px;
+        width: 35px;
     }
 
     .socialmedia-logo:hover {
-        width: 45px;
+        width: 40px;
     }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
     .deck {
-        margin: -30px;
+        margin: -40px;
+        width: 540px;
+        height: 407px;
+        padding: 40px;
     }
 
     .deck .card {
@@ -429,7 +434,7 @@ img {
     }
 
     #footer {
-        font-size: 50px;
+        font-size: 35px;
         width: 100%;
         right: 0;
         bottom: 0;
@@ -437,10 +442,10 @@ img {
     }
 
     .socialmedia-logo {
-        width: 50px;
+        width: 40px;
     }
 
     .socialmedia-logo:hover {
-        width: 60px;
+        width: 45px;
     }    
 }
