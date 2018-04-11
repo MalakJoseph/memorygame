@@ -1,0 +1,446 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Backgrounds and figure from https://www.vecteezy.com/vector-art/161987-super-hero-figure-vector */
+    background: url('../img/Superheroes background.jpg');
+    background-size: cover;
+    background-position: bottom;
+    font-family: 'Lobster', cursive;
+    font-size: x-large;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 600px;
+    height: 450px;
+    padding: 32px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.deck .card {
+    height: 90px; /*90*/
+    width: 90px; /*90*/
+    background: #2e3d49;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    transition: background 1s;
+    margin: 9px;
+}
+
+.card:hover {
+    box-shadow: 2px 2px 20px #3b2d90;
+}
+
+img {
+    z-index: -1;
+    width: 60%;
+}
+
+.deck .card.open {
+    cursor: default;
+    animation: flipInY .75s;
+}
+
+.deck .card.show {
+    transition: unset;
+    background: unset;
+    box-shadow: unset;
+}
+
+.deck .card.match {
+    cursor: default;
+    animation: tada 0.75s;
+}
+
+.deck .card.unmatch {
+    cursor: default;
+    animation: wobble 0.75s;
+}
+
+.deck .card.freeze {
+    pointer-events: none;
+}
+
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+.fa-star {
+    color: gold;
+}
+
+.timer {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+/*
+ * Styles for the figure
+ */
+
+.superheroFigure {
+    background: url(../img/SuperheroFigure.png);
+    background-size: cover;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    width: 30%;
+    height: 40%;
+    padding: 20px;
+    visibility: hidden;
+    opacity: 0;        
+}
+
+.figureAnimation {
+    animation: bounceInLeft 2s;
+}
+
+/*
+ * Styles for the modal
+ */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    background: url(../img/PopupBackground.png);
+    background-size: auto;
+    background-position: center;
+}
+  
+.popup h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0;
+    color: #c32f;
+}
+
+.popup .content {
+    color: #0b0371;
+    font-size: 25px;
+    overflow: auto;
+    text-align: center;
+}
+
+.show {
+    visibility: visible !important;
+    opacity: 100 !important;
+}
+
+#starRating li {
+    display: inline-block;
+}
+
+#play-again {
+    background-color: #146a82;
+    padding: 0.7rem 1rem;
+    font-size: 1.3rem;
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*
+ * Styles for the footer
+ */
+
+#footer {
+    position: fixed;
+    bottom: 20px; /*20*/
+    right: 30px;
+    font-size: 40px;
+    color: #1d0101;
+}
+
+.socialmedia-logo {
+    width: 50px;
+}
+
+.socialmedia-logo:hover {
+    width: 70px;
+    transition: 0.75s;
+}
+
+/*
+ * Media queries
+ */
+
+@media screen and (max-width: 280px) {
+    .container {
+        font-size: 15px;
+    }
+
+    .score-panel {
+        font-size: 13px;
+    }
+
+    .timer {
+        margin: 0 10px;
+    }
+
+    .deck {
+        width: 100%;
+    }
+
+    .deck .card {
+        height: 15%;
+        width: 20%;
+        margin: 1px;
+    }
+
+    .superheroFigure {
+        width: 100%;
+        height: 30%;
+        bottom: 28px;
+    }
+
+    .popup {
+        width: 80%;
+    }
+
+    .popup h2,
+    .popup .content,
+    #play-again {
+        font-size: 17px;
+    }
+
+    #play-again {
+        width: 100%;
+    }
+
+    #footer {
+        font-size: 20px;
+        width: 100%;
+        right: 0;
+        text-align: center;
+    }
+
+    .socialmedia-logo {
+        width: 30px;
+    }
+
+    .socialmedia-logo:hover {
+        width: 50px;
+    }
+
+}
+
+@media screen and (min-width: 281px) and (max-width: 450px) {
+    .container {
+        font-size: 15px;
+    }
+
+    .deck {
+        width: 100%;
+        margin: -30px;
+    }
+
+    .deck .card {
+        height: 17%;
+        width: 20%;
+        margin: 1px;
+    }
+
+    img {
+        width: 55%;
+    }
+
+    .superheroFigure {
+        width: 100%;
+        height: 30%;
+        bottom: 28px;
+    }
+    
+    .popup {
+        width: 80%;
+    }
+
+    .popup h2 {
+        font-size: 25px;
+    }
+
+    .popup .content,
+    #play-again {
+        font-size: 20px;
+    }
+
+    #play-again {
+        width: 70%;
+    }
+
+    #footer {
+        font-size: 30px;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+    }
+
+    .socialmedia-logo {
+        width: 40px;
+    }
+
+    .socialmedia-logo:hover {
+        width: 50px;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 600px) {
+    .deck {
+        width: 100%;
+        margin: -20px;
+    }
+
+    .deck .card {
+        height: 26%;
+        width: 20%;
+        margin: 5px 2px;
+    }
+
+    .superheroFigure {
+        width: 100%;
+        height: 40%;
+        bottom: 25px;
+    }
+
+    .popup {
+        width: 70%;
+    }
+
+    #play-again {
+        width: 60%;
+    }
+
+    #footer {
+        font-size: 35px;
+        width: 100%;
+        right: 0;
+        bottom: 20px;
+        text-align: center;
+    }
+
+    .socialmedia-logo {
+        width: 40px;
+    }
+
+    .socialmedia-logo:hover {
+        width: 45px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+    .deck {
+        margin: -30px;
+    }
+
+    .deck .card {
+        height: 26%;
+        width: 20%;
+        margin: 5px 2px;
+    }
+
+    .superheroFigure {
+        width: 100%;
+        height: 40%;
+        bottom: 25px;
+    }
+
+    #play-again {
+        width: 51%;
+    }
+
+    #footer {
+        font-size: 50px;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+    }
+
+    .socialmedia-logo {
+        width: 50px;
+    }
+
+    .socialmedia-logo:hover {
+        width: 60px;
+    }    
+}

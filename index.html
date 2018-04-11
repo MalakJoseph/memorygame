@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/lib/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Matching Game</h1>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">0</span> Move(s)
+
+            <span class="timer">0 Min(s) 0 Sec(s)</span>
+
+            <div class="restart" onclick="playAgain()">
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+        <ul class="deck">
+            <!-- Icon set from https://www.vecteezy.com/vector-art/112029-superhero-kid-vectors -->
+            <li class="card" type="Batman">
+                <img src="img/Batman.png" alt="Batman">
+            </li>
+            <li class="card" type="Spiderman">
+                <img src="img/Spiderman.png" alt="Spiderman">
+            </li>
+            <li class="card" type="Hellman">
+                <img src="img/Hellman.png" alt="Hellman">
+            </li>
+            <li class="card" type="WonderWoman">
+                <img src="img/WonderWoman.png" alt="WonderWoman">
+            </li>
+            <li class="card" type="Ironman">
+                <img src="img/Ironman.png" alt="Ironman">
+            </li>
+            <li class="card" type="Hellman">
+                <img src="img/Hellman.png" alt="Hellman">
+            </li>
+            <li class="card" type="Mystique">
+                <img src="img/Mystique.png" alt="Mystique">
+            </li>
+            <li class="card" type="Flash">
+                <img src="img/Flash.png" alt="Flash">
+            </li>
+            <li class="card" type="Batman">
+                <img src="img/Batman.png" alt="Batman">
+            </li>
+            <li class="card" type="SpiderWoman">
+                <img src="img/SpiderWoman.png" alt="SpiderWoman">
+            </li>
+            <li class="card" type="Mystique">
+                <img src="img/Mystique.png" alt="Mystique">
+            </li>
+            <li class="card" type="SpiderWoman">
+                <img src="img/SpiderWoman.png" alt="SpiderWoman">
+            </li>
+            <li class="card" type="WonderWoman">
+                <img src="img/WonderWoman.png" alt="WonderWoman">
+            </li>
+            <li class="card" type="Flash">
+                <img src="img/Flash.png" alt="Flash">
+            </li>
+            <li class="card" type="Spiderman">
+                <img src="img/Spiderman.png" alt="Spiderman">
+            </li>
+            <li class="card" type="Ironman">
+                <img src="img/Ironman.png" alt="Ironman">
+            </li>
+        </ul>
+
+        <span class="superheroFigure"></span>
+
+        <div id="modal" class="overlay">
+            <div class="popup">
+                <h2 class="modal-title">Horray!<br>You should be with them!!</h2>
+                <div class="content">
+                    <p>You made <span id="finalMove"></span> Moves </p>
+                    <p>in <span id="totalTime"> </span> </p>
+                    <p>Rating:  <span id="starRating"></span></p>
+                </div>
+                <button id="play-again" onclick="playAgain()">
+                    Play again</a>
+                </button>
+            </div>
+        </div>
+        
+        <footer id="footer">
+            <div class="signature">Designed By Malak</div>
+            <div class="contacts">
+                <!-- Icons here from https://icon-icons.com/pack/Flat-Gradient-Social-Icons/99 -->
+                <a href="https://www.facebook.com/malak.joseph/"><img src="img/Facebook-icon.png" class="socialmedia-logo" alt="Facebook Icon" title="Follow on Facebook"></a>
+                <a href="https://www.linkedin.com/in/malak-joseph-076bb610b/"><img src="img/Linkedin-icon.png" class="socialmedia-logo" alt="Linkedin Icon" title="Follow on Linkedin"></a>
+                <a href="https://www.tumblr.com/blog/malakjoseph/"><img src="img/Tumblr-icon.png" class="socialmedia-logo" alt="Tumblr Icon" title="Follow on Tumblr"></a>
+                <a href="https://github.com/MalakJoseph/"><img src="img/Github-icon.png" class="socialmedia-logo" alt="Github Icon" title="Follow on Github"></a>
+                <a href="https://www.instagram.com/malak.joseph/"><img src="img/Instagram-icon.png" class="socialmedia-logo" alt="Instagram Icon" title="Follow on Instagram"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
