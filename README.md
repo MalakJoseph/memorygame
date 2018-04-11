@@ -26,6 +26,7 @@ All you have to do is to find all the 8 matched cards within your best time and 
 * From 1-10 makes 3 stars.
 * From 11-14 makes 2 stars.
 * More than 15 makes 1 star.
+
 **Enjoy being a SUPERHERO!**
 
 
