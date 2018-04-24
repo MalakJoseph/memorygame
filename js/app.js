@@ -4,18 +4,18 @@
 
 let card = document.querySelectorAll(".card");
 let cardsHolder = [...card];
-let deck = document.querySelector(".deck");
+const deck = document.querySelector(".deck");
 let moves = document.querySelector(".moves");
 let count = 0;
 const time = document.querySelector(".timer");
 let seconds = 00; minutes = 00; hours = 0;
-const stars = document.querySelectorAll(".fa-star")
+const stars = document.querySelectorAll(".fa-star");
 let openedCards = deck.querySelectorAll(".open");
-let matchedCards = document.getElementsByClassName("match");
+const matchedCards = document.getElementsByClassName("match");
 let startNow;
-let modal = document.getElementById("modal");
-let modalTitle = document.querySelector(".modal-title");
-let superheroFigure = document.querySelector(".superheroFigure");
+const modal = document.getElementById("modal");
+const modalTitle = document.querySelector(".modal-title");
+const superheroFigure = document.querySelector(".superheroFigure");
 
 /*=================================*/
 // Shuffling cards
@@ -39,7 +39,7 @@ function shuffle(array) {
     }
 
     return array;
-};
+}
 
 
 /*=================================*/
@@ -48,10 +48,8 @@ function shuffle(array) {
 
 function clickedCard() {
     for (let i = 0; i < cardsHolder.length; i++) {
-    	cardsHolder[i].classList.remove("open", "show", "match", "unmatch");
         cardsHolder[i].addEventListener("click", function() {
             cardsHolder[i].classList.add("open", "show");
-            cardsHolder[i].classList.remove("card-image");
             openedCards = deck.querySelectorAll(".open");
             for (let i = 0; i < openedCards.length; i++) {
 				if (openedCards.length > 1) {
@@ -67,13 +65,13 @@ function clickedCard() {
         });
         cardsHolder[i].addEventListener("click", figureWindow);
     }
-};
+}
 
 // Incase of matching
 function match() {
 	openedCards[0].classList.add("match", "freeze");
 	openedCards[1].classList.add("match", "freeze");
-};
+}
 
 // Incase of not matching
 function unmatch() {
@@ -85,14 +83,14 @@ function unmatch() {
 		openedCards[1].classList.remove("show", "unmatch");
 		heat();
 	}, 700);
-};
+}
 
 // Freezing all cards for a while
 function freeze() {
     cardsHolder.forEach(function(card) {
     	card.classList.add("freeze");
     });
-};
+}
 
 // Heating all cards but matched cards
 function heat() {
@@ -102,7 +100,7 @@ function heat() {
 			matchedCards[i].classList.add("freeze");
 		}
 	});
-};
+}
 
 // Setting moves to be incremented every 2 selected cards
 function startMoves() {
@@ -117,7 +115,7 @@ function startMoves() {
 		stars[1].style.cssText = "color: #7a060f";
 		modalTitle.innerHTML = "Great!";
 	}
-};
+}
 
 // Starting timer right after hitting the first move
 function startTimer() {
@@ -134,7 +132,7 @@ function startTimer() {
 			}
 		}, 1000);
 	}
-};
+}
 
 // Showing hero's figure
 function figureWindow() {
@@ -156,42 +154,18 @@ function modalWindow() {
 		let finalTime = time.innerHTML;
         let starRating = document.querySelector(".stars").innerHTML;
         moves = moves.innerHTML;
-        // Change footer color for accessibility 
+        // Change footer color for accessibility
         document.getElementById("footer").style.cssText = "color: white";
         // Displaying move, rating and time on modal
         document.getElementById("finalMove").innerHTML = moves;
         document.getElementById("starRating").innerHTML = starRating;
         document.getElementById("totalTime").innerHTML = finalTime;
 	}
-};
+}
 
-// Playing Again 
+// Refreshing the page
 function playAgain() {
-    modal.classList.remove("show");
-	// Shuffling again
-	shuffle(cardsHolder);
-    // Remove all existing classes
-    for (let i = 0; i < cardsHolder.length; i++) {
-    	cardsHolder.forEach.call(cardsHolder, function(item) {
-    		deck.appendChild(item);
-    	});
-    	cardsHolder[i].classList.remove("show", "open", "match", "unmatch", "freeze");
-    };
-    // Reset moves
-    count = 0;
-    moves.innerHTML = count;
-    // Reset rating
-    for (let i= 0; i < stars.length; i++) {
-    	stars[i].style.color = "#FFD700";
-    	stars[i].style.visibility = "visible";
-	};
-	// Reset Timer
-	seconds = 0;
-	minutes = 0;
-	hours = 0;
-	time.innerHTML = "0 Min(s) 0 Sec(s)"
-	clearInterval(startNow);
-	window.location.reload(false);
+	window.location.reload();
 }
 
 /*---------------------------------------------*/
