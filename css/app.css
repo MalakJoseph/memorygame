@@ -54,8 +54,8 @@ h1 {
 }
 
 .deck .card {
-    height: 90px; /*90*/
-    width: 90px; /*90*/
+    height: 90px;
+    width: 90px;
     background: #2e3d49;
     border-radius: 8px;
     cursor: pointer;
@@ -78,7 +78,7 @@ img {
 
 .deck .card.open {
     cursor: default;
-    animation: flipInY .75s;
+    animation: flipInY .5s;
 }
 
 .deck .card.show {
@@ -150,7 +150,7 @@ img {
     height: 40%;
     padding: 20px;
     visibility: hidden;
-    opacity: 0;        
+    opacity: 0;
 }
 
 .figureAnimation {
@@ -184,7 +184,7 @@ img {
     background-size: auto;
     background-position: center;
 }
-  
+
 .popup h2 {
     font-size: 30px;
     text-align: center;
@@ -237,7 +237,7 @@ img {
 }
 
 .socialmedia-logo:hover {
-    width: 70px;
+    width: 60px;
     transition: 0.75s;
 }
 
@@ -331,7 +331,7 @@ img {
         height: 30%;
         bottom: 28px;
     }
-    
+
     .popup {
         width: 80%;
     }
@@ -447,5 +447,5 @@ img {
 
     .socialmedia-logo:hover {
         width: 45px;
-    }    
+    }
 }
