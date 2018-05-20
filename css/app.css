@@ -225,11 +225,10 @@ img {
  */
 
 #footer {
-    position: fixed;
-    bottom: 20px; /*20*/
-    right: 30px;
+    position: relative;
     font-size: 40px;
     color: #1d0101;
+    text-align: center;
 }
 
 .socialmedia-logo {
@@ -291,9 +290,6 @@ img {
 
     #footer {
         font-size: 20px;
-        width: 100%;
-        right: 0;
-        text-align: center;
     }
 
     .socialmedia-logo {
@@ -351,10 +347,6 @@ img {
 
     #footer {
         font-size: 30px;
-        width: 100%;
-        right: 0;
-        bottom: 0;
-        text-align: center;
     }
 
     .socialmedia-logo {
@@ -394,10 +386,6 @@ img {
 
     #footer {
         font-size: 30px;
-        width: 100%;
-        right: 0;
-        bottom: 0;
-        text-align: center;
     }
 
     .socialmedia-logo {
@@ -409,7 +397,11 @@ img {
     }
 }
 
-@media screen and (min-width: 601px) and (max-width: 1200px) {
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+    body {
+        background-position-y: 50px;
+    }
+
     .deck {
         margin: -40px;
         width: 540px;
@@ -435,10 +427,7 @@ img {
 
     #footer {
         font-size: 35px;
-        width: 100%;
-        right: 0;
-        bottom: 0;
-        text-align: center;
+        bottom: -50px;
     }
 
     .socialmedia-logo {
@@ -447,5 +436,13 @@ img {
 
     .socialmedia-logo:hover {
         width: 45px;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    #footer {
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
     }
 }
