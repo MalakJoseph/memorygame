@@ -398,10 +398,6 @@ img {
 }
 
 @media screen and (min-width: 601px) and (max-width: 1000px) {
-    body {
-        background-position-y: 50px;
-    }
-
     .deck {
         margin: -40px;
         width: 540px;
