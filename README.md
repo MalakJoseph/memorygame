@@ -5,6 +5,7 @@
 * [Instructions](#instructions)
 * [Contributing](#contributing)
 * [Credits](#credits)
+* [License](#license)
 
 
 ## Instructions
@@ -16,7 +17,7 @@
 ### Installation
 
 There isn't a required one!
-Now you can clone, download or open it from [here](https://malakjoseph.github.io/memorygame/).
+Now you can clone, download or open it from <a href="https://malakjoseph.github.io/memorygametest/">here</a>.
 
 
 ### Game Instructions
@@ -26,7 +27,6 @@ All you have to do is to find all the 8 matched cards within your best time and 
 * From 1-10 makes 3 stars.
 * From 11-14 makes 2 stars.
 * More than 15 makes 1 star.
-
 **Enjoy being a SUPERHERO!**
 
 
@@ -39,3 +39,8 @@ Now, all pull requests are welcomed!
 
 * Project idea from Udacity Nanodegree program.
 * All icons and backgrounds used here are free for Personal and Commercial use and attributions are within the codes.
+
+
+## License
+
+This project is licensed under the terms of the MIT license.
