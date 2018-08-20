@@ -1,5 +1,7 @@
 # Memory Game Project
 
+<img src="img/Matching Game.JPG" alt="Matching Game Screenshot">
+
 ## Table of Contents
 
 * [Instructions](#instructions)
